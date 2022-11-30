@@ -1,0 +1,45 @@
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Rezervuaro talpos skaičiuoklė</div>
+      <div class="card-body">
+
+        <div class="mb-3">
+          <label>Rezervuaro talpa (l):</label>
+          <input type="number" class="form-control" [(ngModel)]="turis" >
+        </div>
+
+        <div class="mb-3">
+          <label>Rezervuaro pildymo greitis (l/val.):</label>
+          <input type="number" class="form-control" [(ngModel)]="greitis" >
+        </div>
+
+        <div class="mb-3">
+          <label>Rezervuaro pildymo laikas (val.):</label>
+          <input type="number" class="form-control" [(ngModel)]="laikas" >
+        </div>
+
+        <button class="btn btn-success" [disabled]="turis==null || greitis==null || laikas==null"  (click)="skaiciuoti()">Skaičiuoti</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Skaičiavimo rezultatai</div>
+      <div *ngIf="pripilta==null" class="ps-3"> Įveskite rezervuaro talpą, skysčio pylimo greitį, laiką ir paspauskite skaičiuoti: {{ pripilta }} </div>
+      <div class="card-body">
+
+        <div *ngIf="pripilta!=null && turis!=null">
+          <div> Rezultatas: {{ pripilta }} </div>
+          <div *ngIf="(pripilta>(0.8*turis)) && (pripilta<=turis)" class="alert alert-success">Rezervuaro talpa kritiškai pripildyta</div>
+          <div *ngIf="(pripilta>turis)" class="alert alert-success">Rezervuaro talpa yra perpildyta</div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar" [style.width.%]="proc" role="progressbar" aria-label="Basic example" style="width: 0" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" ></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

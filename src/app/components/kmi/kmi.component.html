@@ -1,0 +1,48 @@
+<!--<p>KMI SKAICIAVIMO FORMA</p>-->
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card">
+
+
+      <div class="card-header">KMI skaičiuoklė</div>
+      <div class="card-body">
+
+        <div class="mb-3">
+          <label>Jūsų svoris:</label>
+          <input type="number" class="form-control" [(ngModel)]="svoris" >
+        </div>
+
+        <div class="mb-3">
+          <label>Jūsų ūgis:</label>
+          <input type="number" class="form-control" [(ngModel)]="ugis" >
+        </div>
+        <button class="btn btn-success" [disabled]="ugis==null || svoris==null"  (click)="skaiciuoti()">Skaičiuoti</button>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+
+
+      <div class="card-header">KMI rezultatai</div>
+      <div class="card-body">
+        <div *ngIf="kmi==null"> Įveskite ūgį ir svorį ir paspauskite skaičiuoti: {{ kmi }} </div>
+       <div *ngIf="kmi!=null">
+          <div> Rezultatas: {{ kmi }} </div>
+
+          <div *ngIf="kmi<18.5" class="alert alert-success">Jūsų svoris nepakankamas</div>
+          <div *ngIf="kmi>18.5 && kmi<25" class="alert alert-success">Jūsų svoris optimalus</div>
+          <div *ngIf="kmi>25 && kmi<30" class="alert alert-success">Jūsų turite antsvorio</div>
+          <div *ngIf="kmi>30" class="alert alert-success">Jūsų svoris per didelis</div>
+          <div class="progress">
+            <div class="progress-bar" [style.width.%]="proc" role="progressbar" aria-label="Basic example" style="width: 0" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" ></div>
+          </div>
+       </div>
+
+      </div>
+    </div>
+  </div>
+</div>

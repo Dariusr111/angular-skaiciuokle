@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">Pirkinių sąrašas</div>
+  <div class="card-body">
+    <div>
+      <div class="list-group">
+        <app-cart-item *ngFor="let product of products; let i=index" [product]="product" [index]="i" (productDelete)="onReceiveDelete($event)" ></app-cart-item>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mt-4">
+  <div class="card-header">Pirkinių suvestinė</div>
+<app-cart-details></app-cart-details>
+</div>
