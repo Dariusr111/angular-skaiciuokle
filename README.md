@@ -1,27 +1,12 @@
 # Skaiciuokle
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+![image](https://user-images.githubusercontent.com/106965568/204757177-2d5b0619-87ca-4488-bec8-4659788777ed.png)
+![image](https://user-images.githubusercontent.com/106965568/204757306-334a6ae4-52f9-43f1-8765-4ffb58eac25e.png)
+![image](https://user-images.githubusercontent.com/106965568/204757419-83b526e9-3c01-4c8f-a5e0-574e22e60110.png)
+![image](https://user-images.githubusercontent.com/106965568/204757513-57589d61-3ec5-4c52-95e5-8e9f594229cd.png)
+![image](https://user-images.githubusercontent.com/106965568/204758151-a036acff-87f3-4cc7-ba44-48c1ec77ff4c.png)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
